@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./ConferenceEvent.css";
 import TotalCost from "./TotalCost";
 import { toggleMealSelection } from "./mealsSlice";
@@ -12,6 +13,7 @@ const ConferenceEvent = () => {
     const avItems = useSelector((state) => state.av);
     const mealsItems = useSelector((state) => state.meals);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const remainingAuditoriumQuantity = 3 - venueItems.find(item => item.name === "Auditorium Hall (Capacity:200)").quantity;
 
     
@@ -154,7 +156,13 @@ const mealsTotalCost = calculateTotalCost("meals");
     return (
         <>
             <navbar className="navbar_event_conference">
-                <div className="company_logo">Conference Expense Planner</div>
+                <div
+                    className="company_logo"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/")}
+                >
+                    Conference Expense Planner
+                </div>
                 <div className="left_navbar">
                     <div className="nav_links">
                         <a href="#venue" onClick={() => navigateToProducts("#venue")} >Venue</a>
