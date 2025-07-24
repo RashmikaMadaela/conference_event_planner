@@ -155,7 +155,7 @@ const mealsTotalCost = calculateTotalCost("meals");
 
     return (
         <>
-            <navbar className="navbar_event_conference">
+            <nav className="navbar_event_conference">
                 <div
                     className="company_logo"
                     style={{ cursor: "pointer" }}
@@ -173,7 +173,7 @@ const mealsTotalCost = calculateTotalCost("meals");
                         Show Details
                     </button>
                 </div>
-            </navbar>
+            </nav>
             <div className="main_container">
                 {!showItems
                     ?

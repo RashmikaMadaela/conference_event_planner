@@ -248,21 +248,29 @@
   .table_item_data tbody tr:first-child:hover {
     background-color: transparent;
   }
-  navbar {
+  .navbar_event_conference {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
-    background-color:#133b6a;
+    padding: 40px 20px;
+    background-color: #133b6a;
     color: white;
     width: 100vw;
+    margin: 0;
+    min-height: 60px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
   }
   
-  .company_logo {
+.company_logo {
     font-size: 30px;
     color: #EFC16B;
     font-weight: 700;
-  }
+    padding-left: 32px;
+}
   .nav_links{
     display: flex;
     gap: 170px;
@@ -305,8 +313,13 @@
   
   .navbar_event_conference{
     position: fixed;
-    top: 1px;
+    top: 0;
+    left: 0;
+    width: 100vw;
     z-index: 99;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   .btn-disabled {
     opacity: 0.5; /* Reduce opacity to visually indicate disabled state */
